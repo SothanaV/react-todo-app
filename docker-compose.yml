@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: app
+      dockerfile: Dockerfile
+    command: bash run-frontend.sh
+    volumes:
+      - ./app:/app
+    ports:
+      - 3000:3000
+    
